@@ -1,0 +1,49 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    align-self: flex-start;
+
+    display: flex;
+    column-gap: 10px;
+
+    max-width: 60%;
+
+    @media (max-width:$tablet) {
+        max-width: 80%;
+    }
+
+    &.owner {
+        align-self: flex-end;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    background-color: $messageBgColor;
+    color: #fff;
+
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 5px;
+
+    .owner & {
+        background-color: $ownMessageBgColor;
+        color: #000;
+    }
+}
+
+.date {
+    font-size: 8px;
+
+    .owner & {
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,84 @@
+@import '../../styles/variables.scss';
+
+.container {
+    flex: 0 0 30%;
+
+    max-height: 100%;
+    overflow: hidden;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width:$tablet) {
+        flex: 0 0 35%;
+    }
+
+    @media (max-width:$mobile) {
+        flex: 1 1 auto;
+    }
+}
+
+.topBlock {
+    padding: 15px;
+    background-color: $bgBlocksColor;
+}
+
+.userBlock {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.avatar {
+    //margin-right: 10px;
+}
+
+.userName {
+    font-size: 20px;
+}
+
+.exitBtn {
+    margin-left: auto;
+    align-self: flex-start;
+
+    flex: 0 0 20px;
+    height: 20px;
+    width: 20px;
+    position: relative;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.chatsBlock {
+    flex: 1 1 auto;
+    background-color: #fff;
+
+    border-top: 2px solid $borderColor;
+
+    overflow-y: auto;
+}
+
+.chatTitle {
+    padding: 20px;
+
+    color: rgb(0, 153, 248);
+    font-size: 24px;
+
+    @media (max-width:$mobileSmall) {
+        padding: 10px;
+    }
+}
+
+.chatList {}

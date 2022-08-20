@@ -1,0 +1,73 @@
+@import './../../../styles/variables.scss';
+
+.container {
+    padding: 20px;
+
+    border-bottom: 2px solid $borderColor;
+    cursor: pointer;
+    user-select: none;
+
+    display: flex;
+
+    transition: all 0.3s ease 0s;
+
+    @media (max-width:$mobileSmall) {
+        padding: 10px;
+    }
+
+    @media (min-width:$mobile) {
+        &.active {
+            background-color: rgb(250, 221, 105);
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: rgb(254, 248, 223);
+        }
+    }
+}
+
+.avatar {
+    margin-right: 10px;
+}
+
+.content {
+    height: 50px;
+    overflow: hidden;
+
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.topBlock {
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+        margin-bottom: 2px;
+    }
+}
+
+.name {
+    font-size: 18px;
+    line-height: 1.1;
+    margin-right: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.date {
+    align-self: flex-start;
+    font-size: 12px;
+    color: $textColor;
+
+    white-space: nowrap;
+}
+
+.text {
+    color: $textColor;
+}

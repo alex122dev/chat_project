@@ -1,0 +1,35 @@
+@import '../../../styles/variables.scss';
+
+.container {
+    flex: 1 1 auto;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1 1 auto;
+    overflow: auto;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.sendBlock {
+    padding: 20px;
+    background-color: $bgBlocksColor;
+
+    border-top: 2px solid $borderColor;
+
+    @media (max-width:$mobile) {
+        padding: 15px;
+    }
+
+    @media (max-width:$mobileSmall) {
+        padding: 10px;
+    }
+}

@@ -1,0 +1,11 @@
+@import './variables.scss';
+
+.app {
+    position: relative;
+    height: 100vh;
+
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+
+    display: flex;
+}
